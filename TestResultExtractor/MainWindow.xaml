@@ -1,0 +1,17 @@
+﻿<Window x:Class="TestResultExtractor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestResultExtractor"
+        mc:Ignorable="d"
+        Title="NunitXmlToCSV" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="btn_upload" Content="Upload XML" HorizontalAlignment="Left" Margin="91,73,0,0" VerticalAlignment="Top" Width="72" Click="btn_upload_Click" Height="23"/>
+        <Button x:Name="btn_export" Content="Export to Excel" HorizontalAlignment="Left" Margin="165,177,0,0" VerticalAlignment="Top" Width="147" Click="btn_export_Click"/>
+        <Button x:Name="btn_vwresult" Content="View Results" HorizontalAlignment="Left" Margin="165,123,0,0" VerticalAlignment="Top" Width="147" Click="btn_vwresult_Click"/>
+        <TextBox x:Name="txt_fileupload" HorizontalAlignment="Left" Height="23" Margin="168,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144"/>
+        <Label x:Name="lbl_uploadlabel" Content="Please upload a valid file" Foreground="Red"  HorizontalAlignment="Left" Margin="168,96,0,0" VerticalAlignment="Top" Height="27" Width="144" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
