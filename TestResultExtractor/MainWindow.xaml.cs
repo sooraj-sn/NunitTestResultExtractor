@@ -1,4 +1,8 @@
-﻿#region SystemNamespaces
+﻿
+using MahApps.Metro.Controls;
+
+#region SystemNamespaces
+
 using System;
 using System.Windows;
 #endregion
@@ -12,7 +16,7 @@ namespace TestResultExtractor
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         private string xmlFileName;
 
@@ -60,7 +64,10 @@ namespace TestResultExtractor
             {
                 lbl_uploadlabel.Visibility = Visibility.Hidden;
                 XmlToCSVEngine engine = new XmlToCSVEngine();
-                engine.DisplayResultsInExcel(engine.GetTestResultSet(xmlFileName));
+                engine.DisplayResultsInExcel(engine.GetTestResultSet(xmlFileName), engine.GetSummaryList(xmlFileName));             
+                
+                MessageBox.Show("Export Successful");
+
             }
             
 
